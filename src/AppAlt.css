@@ -1,0 +1,17 @@
+
+
+.occupied2 {
+  background-color:hsl(217, 69%, 52%);
+}
+
+.reserved2 {
+  background-color: hsl(33, 79%, 58%);
+}
+
+.paid2 {
+  background-color: hsl(335, 71%, 49%);
+}
+
+.vacant2 {
+  background-color: hsl(144, 52%, 34%);
+}

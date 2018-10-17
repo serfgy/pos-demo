@@ -1,32 +1,364 @@
-.App {
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+img {
+  width:100%;
+  object-fit: cover;
+}
+
+Link {
+  text-decoration: none !important;
+}
+
+::-webkit-scrollbar { 
+  display: none;
+}
+
+.menu-bar-tile {
+  font-family: 'Varela Round', sans-serif;
+  text-transform: capitalize;
+  height: 8vh;
+  text-align: center;
+  line-height: 8vh;
+  font-size: 3vh;
+}
+
+.tableorder-detail-table-header {
+  color: #8c8c8c;
+  font-weight: normal;
+  font-size: 2vh;
+}
+
+.tableorder-detail-table-desc {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tableorder-detail-table-remark {
+  font-size: 1.8vh;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.tableorder-detail-table-custom {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.tableorder-detail-table-add {
+  font-size: 1.8vh;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+tr:nth-child(5) td:nth-child(1) {  
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+tr:nth-child(4) td:nth-child(1) {  
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+tr:nth-child(3) td:nth-child(1) {  
+  text-align: center;
+}
+
+tr:nth-child(2) td:nth-child(1) {  
+  text-align: center;
+}
+
+th:nth-child(3),
+td:nth-child(3) {  
+  text-align: right;
+}
+
+th:nth-child(4),
+td:nth-child(4) {  
+  text-align: right;
+  padding-right: 3%;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  text-align: center;
+}
+
+table {
+  border-collapse:separate;
+  border-spacing: 0 5px;
+  font-size: 2vh;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i');
+
+
+.table-tab-select {
+  background: #2C2F33;
+  border-radius: 5px;
+}
+
+.table-tab-new-btn {
+  height: 10vh;
+  line-height: 10vh;
+  color: white;
+  border-color: white;
+  margin-bottom: 20px;
+}
+
+.table-tab-select > div {
+  color: grey;
+  padding: 5px;
+  margin: 5px;
+}
+
+.table-tab-select-highlight {
+  background: #424549;
+  border-radius: 5px;
+  color: white !important;
+}
+
+.table-tab-tables {
+  background: #36393e;
+  border-radius: 5px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.table-wrapper {
+  padding: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.table-table {
+  width: 100%;
+  padding-bottom: 100%;
+  position:relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.occupied {
+  background-color:#2A79A8;
+}
+
+.reserved {
+  background-color: #FFB86F;
+}
+
+.paid {
+  background-color: #E84855;
+}
+
+.vacant {
+  background-color: #30BEAE;
+}
+
+.unavailable {
+  background-color: white;
+}
+
+.table-number {
+  position: absolute;
+  top: 5px; right: 5px; 
+  padding: 5px;
+  color: white;
+  font-size: 3vh;
+  line-height: 3.1vh;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.2);
+}
+
+.table-status {
+  position: absolute;
+  line-height: 30px;
+  height: 30px;
+  top: 50px; left: 0; right: 0; 
+  background: rgba(0,0,0,0.2);
+  opacity: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.table-detail-1 {
+  position: absolute;
+  bottom: 0; left: 5px; 
+  /* background: rgba(0,0,0,0.2); */
+  font-size: 18px;
+  color: black;
+  opacity: 0.6;
+}
+
+.table-detail-2 {
+  position: absolute;
+  bottom: 0; right: 5px; 
+  /* background: rgba(0,0,0,0.8); */
+  text-align: right;
+  font-size: 18px;
+  color: black;
+  opacity: 0.6;
+}
+
+.table-detail-3 {
+  position: absolute;
+  top: 0; left: 5px; 
+  /* background: rgba(0,0,0,0.8); */
+  font-size: 18px;
+  color: black;
+  opacity: 0.6;
+}
+
+
+
+
+
+.menu-wrapper {
+  padding: 5px;
+  color: white;
+}
+
+.menu-menu {
+  width: 100%;
+  padding-bottom: 25%;/* this is why padding is slightly off*/
+  position:relative;
+  border:0px solid black;
+  border-radius: 0px;
+  background: #424549;
+  overflow: hidden;
+}
+
+.alt {
+  background: #4a4c51;
+}
+
+.out {
+  background: #36393e;
+  color: grey;
+}
+
+.menu-name {
+  position: absolute;
+  top: 5px; left: 5px;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 3.1vh;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.menu-price {
+  position: absolute;
+  bottom: 5px; left: 5px; 
+  padding: 5px;
+  font-size: 14px;
+  line-height: 3.1vh;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.menu-attn {
+  position: absolute;
+  bottom: 5px; right: 5px; 
+  padding: 5px;
+  font-size: 16px;
+  line-height: 3.1vh;
+}
+
+.menu-menu-drink {
+  width: 100%;
+  padding-bottom: 25%;
+  position:relative;
+  border:0px solid black;
+  border-radius: 0px;
+  background: #424549;
+  overflow: hidden;
+}
+
+.menu-img-drink {
+  position: absolute;
+  top: 0px; left: 0; right: 75%; bottom: 0px;
+  margin: 5px;
+  background-size: cover;
+  filter: grayscale(50%);
+  box-shadow: inset 0px 0px 20px 5px #23272A;
+}
+
+.menu-name-drink {
+  position: absolute;
+  top: 5px; left: 25%; 
+  padding: 5px;
+  font-size: 14px;
+  line-height: 3.1vh;
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+
+.menu-price-drink {
+  position: absolute;
+  bottom: 5px; left: 25%; 
+  padding: 5px;
+  font-size: 14px;
+  line-height: 3.1vh;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.menu-select-sub {
+  width: 100%;
+  padding-bottom: 100%;
+  position:relative;
+  background-size: cover;
+  filter: grayscale(50%);
+  box-shadow: inset 0px 0px 20px 5px #23272A;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.menu-select-sub-title {
+  position: absolute;
+  padding-top: 50px;
+  font-size: 16px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
+  font-family: 'Libre Baskerville', serif;
+  color:white;
+}
+
+
+
+.flip-box {
+  background-color: transparent;
+  width: 64px;
+  height: 64px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
 }
